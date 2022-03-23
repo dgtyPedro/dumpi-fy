@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500&display=swap");
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+body {
+  background-color: #0d1117;
+  color: white;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 3vh;
+  padding-inline: 5vw;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-inline: 20vw;
+}
+
+main > a {
+  text-decoration: none;
+  color: #0d1117;
+  background-color: white;
+  padding: 10px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+  cursor: pointer;
+}
+
+main > a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#logo {
+  font-family: 'Caveat', cursive;
+  text-decoration: none;
+  color: white;
+}
+
+h1 {
+  font-size: 2rem;
+  font-style: italic;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+nav > a {
+  font-family: 'Caveat', cursive;
+  font-size: 3rem;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+  cursor: pointer;
+}
+
+nav > a:hover {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
+#help {
+  position: fixed;
+  bottom: 10vh;
+  right: 10vw;
+}
+
+#help > i {
+  font-size: 4rem;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+  cursor: pointer;
+}
+
+#help:hover i {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+/*# sourceMappingURL=style.css.map */
