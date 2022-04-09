@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
-    <title>Document</title>
+    <title>Dumpi-fy</title>
     <script src="https://kit.fontawesome.com/b0c45caebd.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <?php include('layout/navbar.php')?>
 
     <main>
-        <h1 style="text-align: center;">make your music simpler.</h1>
-        <p>simpli-fy is a spotify playlist wrapper 
-            that diminishes playlists sizes and makes the process of downloading them more convenient.</p>
+        <h1 style="text-align: center;">make your music unite.</h1>
+        <p>dumpi-fy is a spotify playlist wrapper 
+            that dumps a random group of music from a playlist to another one and makes the merge process of playlists more convenient.</p>
 
         <p>We will get the chosen playlist and create (or insert to an already created playlist) X number of tracks 
             of the chosen playlist.

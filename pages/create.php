@@ -12,8 +12,17 @@
     <?php include('layout/navbar.php')?>
 
     <main>
-        
-
+        <form>
+            <select required>
+                <option selected>⬇ Select the main playlist</option>
+            </select>
+            <br/>
+            <input required/>
+            <br/>
+            <select required>
+                <option selected>⬇ Select the dump playlist</option>
+            </select>
+        </form>
     </main>
 </body>
 </html>
