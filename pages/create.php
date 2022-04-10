@@ -11,17 +11,28 @@
 <body>
     <?php include('layout/navbar.php')?>
 
-    <main>
-        <form>
-            <select required>
+    <main style="height: 70vh; justify-content: center;">
+        <form method="POST" action="./Result.php">
+            
+            <input type="hidden" value="<?=$_GET['code']?>" name="code" required>
+            <input type="hidden" value="<?=$refreshToken?>" name="refresh" required>
+            <select name="motherlink" required>
                 <option selected>⬇ Select the main playlist</option>
+                <?php foreach($playlists as $id=>$playlist):?>
+                    <option value="<?=$id?>"><?=$playlist?></option>
+                <?php endforeach?>
             </select>
             <br/>
-            <input required/>
+            <input type="text" name="number" required/>
             <br/>
-            <select required>
+            <select name="childlink" required>
                 <option selected>⬇ Select the dump playlist</option>
+                <?php foreach($playlists as $id=>$playlist):?>
+                    <option value="<?=$id?>"><?=$playlist?></option>
+                <?php endforeach?>
             </select>
+            <br/>
+            <input type="submit"/>
         </form>
     </main>
 </body>
