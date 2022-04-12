@@ -13,26 +13,35 @@
 
     <main style="height: 70vh; justify-content: center;">
         <form method="POST" action="./Result.php">
+      
+        <h1 style="font-style: normal;">Dump It!</h1>
             
-            <input type="hidden" value="<?=$_GET['code']?>" name="code" required>
-            <input type="hidden" value="<?=$refreshToken?>" name="refresh" required>
-            <select name="motherlink" required>
-                <option selected>⬇ Select the main playlist</option>
+            <input id="input" type="hidden" value="<?=$_GET['code']?>" name="code" required>
+            <input id="input" type="hidden" value="<?=$refreshToken?>" name="refresh" required>
+            <select id="input" name="motherlink" required>
+                <option  selected>⬇ Select the main playlist</option>
                 <?php foreach($playlists as $id=>$playlist):?>
                     <option value="<?=$id?>"><?=$playlist?></option>
                 <?php endforeach?>
             </select>
-            <br/>
-            <input type="text" name="number" required/>
-            <br/>
-            <select name="childlink" required>
+           
+            <input id="input" type="number" min="2" max="1000" name="number" placeholder="Number of Tracks to Dump" required/>
+         
+            <select id="input" name="childlink" required>
                 <option selected>⬇ Select the dump playlist</option>
                 <?php foreach($playlists as $id=>$playlist):?>
                     <option value="<?=$id?>"><?=$playlist?></option>
                 <?php endforeach?>
             </select>
-            <br/>
-            <input type="submit"/>
+    
+        
+            <div style="display: flex; align-items:center">
+            <label for="checkbox">Empty playlist?</label>
+            <input type="checkbox" name="emptyPlaylist" id="checkbox" />
+            </div>
+     
+            <input id="input" type="submit" value="Go"/>
+  
         </form>
     </main>
 </body>

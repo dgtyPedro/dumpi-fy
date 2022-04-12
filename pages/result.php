@@ -12,12 +12,20 @@
     <?php include('layout/navbar.php')?>
 
     <main>
-        <h1 style="text-align: center; border: 0px solid red; width: 100%;">Songs dumped!</h1>
-        <h2 
-        onclick="window.open('https://open.spotify.com/playlist/<?=$childlink?>', '_blank').focus()"
-        style="text-align: start; border: 0px solid red; width: 100%; cursor: pointer">*Click Here to Open It</h2>
-        <h3 onclick="location.href='./Create'"
-        style="text-align: end; border: 0px solid red; width: 100%; cursor: pointer">Click Here to Dump Again*</h3>
+        <?php if(isset($erro)){
+           echo '<h1 style="text-align: center; border: 0px solid red; width: 100%;">' . $erro . '</h1>';?>
+           <h3 onclick="location.href='./Create'"
+            style="text-align: end; border: 0px solid red; width: 100%; cursor: pointer">Click Here to Dump Again*</h3>
+        <?php 
+        }else{
+        ?>
+            <h1 style="text-align: center; border: 0px solid red; width: 100%;">Songs dumped!</h1>
+            <h2 
+            onclick="window.open('https://open.spotify.com/playlist/<?=$childlink?>', '_blank').focus()"
+            style="text-align: start; border: 0px solid red; width: 100%; cursor: pointer">*Click Here to Open It</h2>
+            <h3 onclick="location.href='./Create'"
+            style="text-align: end; border: 0px solid red; width: 100%; cursor: pointer">Click Here to Dump Again*</h3>
+        <?php } ?>
     </main>
 
 </body>

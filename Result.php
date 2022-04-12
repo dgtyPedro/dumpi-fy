@@ -1,12 +1,13 @@
 <?php 
 
 require 'vendor/autoload.php';
-require 'config.php'; // Declare $childlinkIENT_ID, $childlinkIENT_SECRET, $BASE_URL
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 $session = new SpotifyWebAPI\Session(
-    $CLIENT_ID,
-    $CLIENT_SECRET,
-    $BASE_URL
+    $_ENV['CLIENT_ID'],
+    $_ENV['CLIENT_SECRET'],
+    $_ENV['BASE_URL']
 );
 
 if (!isset($_POST['motherlink']) && !isset($_POST['childlink']) && !isset($_POST['number'])){
@@ -27,16 +28,17 @@ if (isset($_POST['code'])) {
     $number = $_POST['number'];
 
     $x = 0;
-    $musics = array( );
+    $musics = array();
 
-    while($x<=10){
-        $playlistTracks = $api->getPlaylistTracks($motherlink, ['offset' => $x*100]); // Get X chunk of Mother's Playlist, ex: $x = 1 (1st music - 100th music); $x = 2 (101th music - 200th music)
-        foreach ($playlistTracks->items as $track) {
-            $track = $track->track;
-            $musics[$track->id] = $track->id;   // Save Id of each track
-        } 
-        $x+=1;
-    }
+    try{
+        while($x<=10){
+            $playlistTracks = $api->getPlaylistTracks($motherlink, ['offset' => $x*100]); // Get X chunk of Mother's Playlist, ex: $x = 1 (1st music - 100th music); $x = 2 (101th music - 200th music)
+            foreach ($playlistTracks->items as $track) {
+                $track = $track->track;
+                $musics[$track->id] = $track->id;   // Save Id of each track
+            } 
+            $x+=1;
+        }
 
         if ($number>count($musics)){
             $number = count($musics); // Limit number of tracks of the Child's Playlist
@@ -46,12 +48,15 @@ if (isset($_POST['code'])) {
         $arraychunks = count($random)/100; 
         $arraychunks = (int) $arraychunks + 1;
 
+        if(isset($_POST['emptyPlaylist']) && $_POST['emptyPlaylist'] == true){
+            $api->replacePlaylistTracks($childlink, null);
+        }
+
         try {
             if ($arraychunks<=1){
-                $api->replacePlaylistTracks($childlink, $random);
+                $api->addPlaylistTracks($childlink, $random);
             }else{
                 $y = 0;
-                $api->replacePlaylistTracks($childlink, null);
 
                 while ($y<$arraychunks*100){
                     $chunktracks = array_slice($random, $y, 100);
@@ -60,7 +65,7 @@ if (isset($_POST['code'])) {
                 }
             }
         } catch (Exception $e) {
-            // echo 'Error Log: ',  $e->getMessage(), "\n";
+            $erro = $e->getMessage();
         }
 
         $birthedChild = $api->getPlaylist($childlink); 
@@ -70,6 +75,10 @@ if (isset($_POST['code'])) {
 
         $birthedChildTracks = $api->getPlaylistTracks($childlink);
         include('./pages/result.php'); // Render Front-End
+    } catch (Exception $e) {
+        $erro = $e->getMessage();
+        
+    }
    
 } else {
     header('Location: ' . $session->getAuthorizeUrl($options));

@@ -54,6 +54,19 @@ main > a {
   cursor: pointer;
 }
 
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 main > a:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
@@ -109,7 +122,7 @@ nav > a:hover {
           transform: scale(1.25);
 }
 
-select, option, input {
+#input {
   background-color: transparent;
   color: white;
   font-family: 'Caveat', cursive;
@@ -119,7 +132,11 @@ select, option, input {
   width: 30vw;
   height: 5vh;
   min-width: 240px;
-  margin: 1%;
+  margin: 2%;
+}
+
+#checkbox {
+  zoom: 200%;
 }
 
 select:focus, option:focus, input:focus {

@@ -40,6 +40,12 @@ main > a{
     cursor: pointer;
 }
 
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 main > a:hover{
     transform: scale(1.1);
 }
@@ -88,7 +94,7 @@ nav > a:hover{
     transform: scale(1.25);
 }
 
-select, option, input{
+#input{
     background-color: transparent;
     color: white;
     font-family: 'Caveat', cursive;
@@ -97,12 +103,17 @@ select, option, input{
     width: 30vw;
     height: 5vh;
     min-width: 240px;
-    margin: 1%;
+    margin: 2%;
 }
+
+#checkbox{
+    zoom: 200%;
+}
+
+
 
 select:focus, option:focus, input:focus{
     outline: none;
-
 }
 
 option{
