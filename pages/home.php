@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="./styles/style.css">
     <title>Dumpi-fy</title>
     <script src="https://kit.fontawesome.com/b0c45caebd.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./img/logo.png">
 </head>
 <body>
     <?php include('layout/navbar.php')?>
 
     <main>
+ 
         <h1 style="text-align: center;">make your music unite.</h1>
         <p style="text-align: justify;">dumpi-fy is a spotify playlist wrapper 
             that dumps a random group of music from a playlist to another one and makes the merge process of playlists more convenient.</p>
