@@ -12,7 +12,7 @@
     <?php include('layout/navbar.php')?>
 
     <main style="height: 70vh; justify-content: center;">
-        <form method="POST" action="./Result.php">
+        <form method="POST" action="./Result">
       
         <h1 style="font-style: normal;">Dump It!</h1>
             
