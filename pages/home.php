@@ -22,7 +22,7 @@
             of the chosen playlist.
         </p>
 
-        <a href="./Create">Connect to Spotify and Start Now</a>
+        <a href="./Create" style="text-align: center;">Connect to Spotify and Start Now</a>
         
         <!-- <img src="./img/simplify1.gif" width="200px"/> -->
 
