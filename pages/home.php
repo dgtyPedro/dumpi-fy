@@ -13,10 +13,10 @@
 
     <main>
         <h1 style="text-align: center;">make your music unite.</h1>
-        <p>dumpi-fy is a spotify playlist wrapper 
+        <p style="text-align: justify;">dumpi-fy is a spotify playlist wrapper 
             that dumps a random group of music from a playlist to another one and makes the merge process of playlists more convenient.</p>
 
-        <p>We will get the chosen playlist and create (or insert to an already created playlist) X number of tracks 
+        <p style="text-align: justify;">We will get the chosen playlist and create (or insert to an already created playlist) X number of tracks 
             of the chosen playlist.
         </p>
 
