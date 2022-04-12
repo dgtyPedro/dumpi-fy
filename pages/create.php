@@ -45,5 +45,6 @@
   
         </form>
     </main>
+    <?php include('layout/footer.php')?>
 </body>
 </html>

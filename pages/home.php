@@ -28,10 +28,6 @@
 
     </main>
 
-
-
-
-
-    <!-- <div id="help"><i class="fa-solid fa-circle-question"></i></div> -->
+    <?php include('layout/footer.php')?>
 </body>
 </html>
