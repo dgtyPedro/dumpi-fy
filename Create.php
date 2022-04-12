@@ -48,7 +48,7 @@ if (isset($_GET['code'])) {
         // include ('html/home.php');
 
     }catch (exception $e){
-        header('Location: ' . $BASE_URL);
+        header('Location: ' . $_ENV['BASE_URL']);
         die();
     }
     
