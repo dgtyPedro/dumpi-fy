@@ -77,7 +77,7 @@ if (isset($_POST['code'])) {
         include('./pages/result.php'); // Render Front-End
     } catch (Exception $e) {
         $erro = $e->getMessage();
-        
+        include('./pages/result.php');
     }
    
 } else {
