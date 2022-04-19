@@ -16,10 +16,10 @@
  
         <h1 style="text-align: center;">make your music unite.</h1>
         <p style="text-align: justify;">dumpi-fy is a spotify playlist wrapper 
-            that dumps a random group of music from a playlist to another one and makes the merge process of playlists more convenient.</p>
+            that dumps a random group of music from a playlist to another and makes the merge process of playlists more convenient.</p>
 
-        <p style="text-align: justify;">We will get the chosen playlist and create (or insert to an already created playlist) X number of tracks 
-            of the chosen playlist.
+        <p style="text-align: justify;">We will get the chosen playlist and insert to an already created playlist X number of tracks 
+            of the chosen playlist. You will have the option of empty the playlist before the dumping.
         </p>
 
         <a href="./Create" style="text-align: center;">Connect to Spotify and Start Now</a>

@@ -15,7 +15,7 @@
     <main style="height: 70vh; justify-content: center;">
         <form method="POST" action="./Result">
       
-        <h1 style="font-style: normal;">Dump It!</h1>
+        <h1 style="font-style: normal;">dump it!</h1>
             
             <input id="input" type="hidden" value="<?=$_GET['code']?>" name="code" required>
             <input id="input" type="hidden" value="<?=$refreshToken?>" name="refresh" required>
@@ -29,7 +29,7 @@
             <input id="input" type="number" min="2" max="1000" name="number" placeholder="Number of Tracks to Dump" required/>
          
             <select id="input" name="childlink" required>
-                <option selected>⬇ Select the dump playlist</option>
+                <option selected>⬇ Select the playlist to dump</option>
                 <?php foreach($playlists as $id=>$playlist):?>
                     <option value="<?=$id?>"><?=$playlist?></option>
                 <?php endforeach?>
