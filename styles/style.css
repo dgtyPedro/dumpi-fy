@@ -140,7 +140,9 @@ nav > a:hover {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 30vw;
-  height: 5vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   min-width: 240px;
   margin: 2%;
 }
