@@ -10,7 +10,7 @@
     <link rel="icon" href="./img/logo.png">
 </head>
 <body>
-    <?php include('layout/navbar.php')?>
+    <?php include('layout/navbar.php') ?>
 
     <main style="height: 70vh; justify-content: center;">
         <form method="POST" action="./Result">
@@ -45,6 +45,6 @@
   
         </form>
     </main>
-    <?php include('layout/footer.php')?>
+    <?php include('layout/footer.php') ?>
 </body>
 </html>
